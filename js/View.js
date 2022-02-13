@@ -15,9 +15,9 @@ export class View {
 		this.grenadeIndicator = this.createElement('div', 'grenade-indicator');
 		this.grenadeLoader = this.createElement('div', 'grenade-loader');
 		this.audio = {
-			startGame: '../assets/audio/start-game.mp3',
-			shot: '../assets/audio/shot.mp3',
-			grenade: '../assets/audio/grenade.mp3',
+			startGame: './assets/audio/start-game.mp3',
+			shot: './assets/audio/shot.mp3',
+			grenade: './assets/audio/grenade.mp3',
 		};
 
 		this.startZombieInvasionEvent = new Event();
