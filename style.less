@@ -1,0 +1,228 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@grid-height: calc(100vh - 2rem);
+@grid-width: calc((@grid-height / 15) * 7);
+
+.plug {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  @media screen and (max-width: 1200px) {
+    & {
+      display: flex;
+    }
+  }
+}
+
+#game {
+  display: flex;
+  background-image: url('assets/main-background.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  position: relative;
+
+  @media screen and (max-width: 1200px) {
+    & {
+      display: none;
+    }
+  }
+}
+
+.container-left {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-right {
+  width: 60%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.grid {
+  width: @grid-width;
+  height: @grid-height;
+  margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  background-color: #000;
+  opacity: 0.9;
+  margin-right: 3rem;
+}
+
+.cell {
+  width: calc(@grid-height / 15);
+  height: calc(@grid-height / 15);
+  border: 1px solid #00ffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.player,
+.zombie,
+.grenade {
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+}
+
+.player {
+  background-image: url('assets/hero.jpg');
+  background-size: 100% 100%;
+}
+
+.zombie {
+  background-image: url('assets/zombie.png');
+  background-size: 100% 100%;
+}
+
+.grenade {
+  background-image: url('assets/grenade.png');
+  background-size: 100% 100%;
+  filter: hue-rotate(91deg);
+}
+
+.btn-container {
+  width: 50%;
+  height: 400px;
+}
+
+.grenade-indicator {
+  width: 100px;
+  height: 100px;
+  background-image: url('assets/grenade.png');
+  background-size: 100% 100%;
+  align-self: flex-end;
+  margin: 1rem 0;
+  border-radius: 50%;
+  position: relative;
+  filter: hue-rotate(91deg);
+}
+
+.grenade-loader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.start-button {
+  width: 100%;
+  height: 13%;
+  margin: 0 auto;
+  background-image: url(assets/start-button.jpg);
+  background-size: 100% 100%;
+  border: none;
+  border-radius: 5px;
+
+  &:hover {
+    cursor: pointer;
+    background-image: url(assets/start-button-reverse.jpg);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  @media screen and (min-width: 1920px) {
+    & {
+      height: 20%;
+    }
+  }
+}
+
+.info {
+  color: darkred;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 50%;
+}
+
+.controls-info {
+  color: #4682b4;
+}
+
+.game-info {
+  font-size: 1.5rem;
+}
+
+.game-info__elem {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.game-info__description {
+  margin-right: 5px;
+}
+
+.game-info__counter {
+  font-weight: bold;
+}
+
+.gameover-container {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.gameover {
+  position: absolute;
+  width: 500px;
+  height: 400px;
+  top: calc(50% - 250px);
+  left: calc(50% - 200px);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.gameover__title {
+  text-transform: uppercase;
+  color: darkred;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 75px;
+}
+
+.gameover__button-container {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gameover__button {
+  width: 50%;
+  height: 50px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

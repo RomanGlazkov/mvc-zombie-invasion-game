@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Zombie Invasion</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game">
+    <div class="container-left">
+      <div class="info">
+        <div class="controls-info">
+          Движение игрока - стрелки ВЛЕВО и ВПРАВО <br>
+          Стрелять - ПРОБЕЛ <br>
+          Бросить гранату - F
+        </div>
+        <div class="game-info">
+          <div class="game-info__elem">
+            <div class="game-info__description">Рекорд:</div>
+            <div class="game-info__record"></div>
+          </div>
+          <div class="game-info__elem">
+            <div class="game-info__description">Уровень игры:</div>
+            <div class="game-info__level"></div>
+          </div>
+          <div class="game-info__elem">
+            <div class="game-info__description">Зомби убито:</div>
+            <div class="game-info__counter"></div>
+          </div>
+        </div>
+      </div>
+      <div class="btn-container"></div>
+    </div>
+    <div class="container-right"></div>
+    <div class="gameover-container">
+      <div class="gameover">
+        <div class="gameover__title">Вас съели :( <br> Попробовать еще раз?</div>
+        <div class="gameover__button-container">
+          <button class="gameover__button start-button"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="plug">Игра пока не предназначена для мобильных устройств</div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
