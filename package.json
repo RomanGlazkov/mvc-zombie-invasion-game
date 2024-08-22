@@ -1,0 +1,8 @@
+{
+  "name": "zombie-invasion-game",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/RomanGlazkov/mvc-zombie-invasion-game.git",
+  "author": "Roman Glazkov <glz94@mail.ru>",
+  "license": "MIT"
+}
