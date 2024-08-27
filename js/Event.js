@@ -1,15 +1,17 @@
-export class Event {
-	constructor() {
-		this.listeners = [];
-	}
+class Event {
+    constructor() {
+        this.listeners = [];
+    }
 
-	subscribe(listener) {
-		this.listeners.push(listener);
-	}
+    subscribe(listener) {
+        this.listeners.push(listener);
+    }
 
-	fire(...args) {
-		this.listeners.forEach((listener) => {
-			listener(...args);
-		});
-	}
+    fire(...args) {
+        this.listeners.forEach((listener) => {
+            listener(...args);
+        });
+    }
 }
+
+export default Event;
