@@ -1,0 +1,20 @@
+{
+    "env": {
+        "browser": true,
+        "es2022": true
+    },
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+    "extends": "airbnb-base",
+    "rules": {
+        "indent": ["error", 4],
+        "max-len": ["warn", {
+            "ignoreStrings": true,
+            "code": 120
+        }],
+        "no-plusplus": ["error", {
+            "allowForLoopAfterthoughts": true
+        }]
+    }
+}

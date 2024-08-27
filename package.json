@@ -1,8 +1,13 @@
 {
-  "name": "zombie-invasion-game",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/RomanGlazkov/mvc-zombie-invasion-game.git",
-  "author": "Roman Glazkov <glz94@mail.ru>",
-  "license": "MIT"
+    "name": "zombie-invasion-game",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/RomanGlazkov/mvc-zombie-invasion-game.git",
+    "author": "Roman Glazkov <glz94@mail.ru>",
+    "license": "MIT",
+    "devDependencies": {
+        "eslint": "^8.57.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-plugin-import": "^2.25.3"
+    }
 }
